@@ -1,6 +1,6 @@
 package com.lissete.interfaztablero;
 
-
+import com.lissete.interfaztablero.*;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
