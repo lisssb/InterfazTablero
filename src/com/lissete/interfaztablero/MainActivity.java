@@ -1,9 +1,11 @@
 package com.lissete.interfaztablero;
 
 import com.lissete.interfaztablero.*;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -57,14 +59,29 @@ public class MainActivity extends Activity implements OnClickListener{
         dibujarTablero();
     }
 	
+	
+	
 	protected void onResume(){
 		super.onResume();
 		Boolean play = false;
+		String player = "";
+		
 		
 		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 	   	if (sharedPreferences.contains(PrefActivity.PLAY_MUSIC_KEY))
     	    play = sharedPreferences.getBoolean(PrefActivity.PLAY_MUSIC_KEY, 
     	    		PrefActivity.PLAY_MUSIC_DEFAULT);
+	   	
+	   	if(sharedPreferences.contains(PrefActivity.PLAYER_KEY)){
+	   		player = sharedPreferences.getString(PrefActivity.PLAYER_KEY, PrefActivity.PLAYER_DEFAULT);
+	   	}
+	   	   	
+	   	if(player.trim().length()>0){
+	   		resultadoTextView.setText("Player :: " + player);
+	   	}
+	   	else{
+	   		resultadoTextView.setText("");
+	   	}
 
 	   	if (play == true)
 	   		Music.play(this, R.raw.funkandblues);
@@ -109,12 +126,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	}
    public void pulsado(View v) {
        int fila, columna, id = v.getId();
-
-		if (game.tableroLleno()) {
-			resultadoTextView.setText(R.string.fin_del_juego);
-			return;
-		}
-		
+       
        fila = deIdentificadorAFila(id);
        columna = deIdentificadorAColumna(id);
        
@@ -131,20 +143,21 @@ public class MainActivity extends Activity implements OnClickListener{
        
        if(game.comprobarCuatro(Game.JUGADOR, fila, columna)){
            dibujarTablero();
-           Toast.makeText(this, "JUGADOR",
-                   Toast.LENGTH_SHORT).show();
-           new AlertDialogFragment().show(getFragmentManager(), "ALERT DIALOG");
+		AlertDialogFragment.newInstance(R.string.winerplayer).show(getFragmentManager(), "ALERT DIALOG");
        }
        else{
-	       int posicion [] = game.juegaMaquina();
+	       int posicion [] = game.juegaMaquina();       
+	       
 	       if(game.comprobarCuatro(Game.MAQUINA, posicion[0], posicion[1])){
 	    	   dibujarTablero();
-	    	   Toast.makeText(this, "MAQUINA",
-	                   Toast.LENGTH_SHORT).show();
-	    	   new AlertDialogFragment().show(getFragmentManager(), "ALERT DIALOG");
+	    	   AlertDialogFragment.newInstance(R.string.winermachine).show(getFragmentManager(), "ALERT DIALOG");
 	       }
 	       else{
 	    	   dibujarTablero();
+	    	   if (game.tableroLleno()) {
+	   			AlertDialogFragment.newInstance(R.string.tableroLLeno).show(getFragmentManager(), "ALERT DIALOG");
+	   			return;
+	   		}
 	       }
        }
    }
@@ -179,7 +192,6 @@ public class MainActivity extends Activity implements OnClickListener{
                 startActivity(new Intent(this, PrefActivity.class));
         		return true;
 			case R.id.mi_salir:
-				//CAMBIO 4 dialogo
 				if (PrefActivity.getShowCloseDialogPreference(this)) {
 					String title = getResources().getString(R.string.app_name);
 					String message = getResources().getString(R.string.salir_de_la_app);					

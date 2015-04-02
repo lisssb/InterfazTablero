@@ -9,6 +9,13 @@
           />
   </PreferenceCategory>    
   <PreferenceCategory android:title="@string/secondCategoryPrefTitle">
+      
+      <EditTextPreference 
+          android:title="@string/playernameTitle"
+          android:summary="@string/playernamesummary"
+          android:key="playerName"
+          />
+      
     	<CheckBoxPreference 
             android:key="music"
             android:title="@string/checBoxPrefTitle"

@@ -6,6 +6,7 @@
     <string name="contentDescription">Hello world!</string>
     <string name="nosepuedecolocarficha">No se puede colocar fichar</string>
     <string name="fin_del_juego">Fin del juego</string>
+    <string name="tableroLLeno">Tablero lleno</string>
     <string name="titulo">Titulo</string>
     <string name="gameOverTitle">Fin del juego</string>
     <string name="gameOverMessage">¿Quiere jugar otra partida?</string>
@@ -27,5 +28,15 @@
     <string name="checBoxPrefTitle">Música de fondo</string>
     <string name="checBoxPrefSummary">Marque si desea escuchar música</string>
     <string name="preferences">Preferencias</string>
+
+    
+    <string name="playernameTitle">Nombre del jugador</string>
+    <string name="playernamesummary">Pulse para indicar el nombre del jugador</string>
+    
+    <string name="player_name">Nombre del jugador</string>
+    
+    <string name="winerplayer">¡Has ganado!</string>
+    <string name="winermachine">¡La máquina ha ganado!</string>
+    
 </resources>
 

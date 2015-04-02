@@ -1,6 +1,8 @@
 package com.lissete.interfaztablero;
 
 
+import java.util.HashMap;
+
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -15,6 +17,9 @@ public class PrefActivity extends Activity {
 	private static final boolean SHOW_EXIT_DIALOG_DEF = true;
 	public final static String PLAY_MUSIC_KEY = "music";
 	public final static boolean PLAY_MUSIC_DEFAULT = true;
+	public final static String COLORS [] = {"red", "blue", "yellow", "purple", "gray"};
+	public final static String PLAYER_KEY = "playerName";
+	public final static String PLAYER_DEFAULT = new String("");
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,7 @@ public class PrefActivity extends Activity {
 		
 		FragmentTransaction ft = getFragmentManager().beginTransaction();
 		ft.replace(R.id.content, new PrefActivityFragtment());
+		
 		ft.commit();
 	}
 
