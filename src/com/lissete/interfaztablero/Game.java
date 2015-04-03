@@ -120,8 +120,6 @@ public class Game {
      array[1] = columna;
      return array;
  }
- 
-
  public boolean comprobarCuatro(int turno, int i, int j ){
 	 return checkRow(turno, i, j) || checkColumn(turno, i, j) || checkDiagonal(turno, i, j);
  }
@@ -132,13 +130,13 @@ public class Game {
 	 
 	 //arriba izquierda
 	 for (int current_i = i-1, current_j = j-1; current_i >= 0 && current_j >=0 && tablero[current_i][current_j] == turno; current_i--, current_j--, count++);
-	 if(count == 3){
+	 if(count >= 3){
 		 return true;
 	 }
 	 //abajo derecha
 	 for (int current_i = i+1, current_j = j+1; current_i < NFILAS && current_j <NCOLUMNAS && tablero[current_i][current_j] == turno; current_i++, current_j++, count++);
 
-	 if(count == 3){
+	 if(count >= 3){
 		 return true;
 	 }
 	 count = 0;
@@ -147,7 +145,7 @@ public class Game {
 	 
 	 for (int current_i = i-1, current_j = j+1; current_i >=0 && current_j <NCOLUMNAS && tablero[current_i][current_j] == turno; current_i--, current_j++, count++);
 
-	 if(count == 3){
+	 if(count >= 3){
 		 return true;
 	 }
 	 
@@ -155,7 +153,7 @@ public class Game {
 	 
 	 for (int current_i = i+1, current_j = j-1; current_i < NFILAS && current_j >= 0 && tablero[current_i][current_j] == turno; current_i++, current_j--, count++);
 
-	 if(count == 3){
+	 if(count >= 3){
 		 return true;
 	 }
 	 return false;
