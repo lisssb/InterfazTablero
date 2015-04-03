@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Connect 4</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="contentDescription">Hello world!</string>
+    <string name="nosepuedecolocarficha">It can not be selected</string>
+    <string name="fin_del_juego">Game over</string>
+    <string name="tableroLLeno">Full board</string>
+    <string name="titulo">Title</string>
+    <string name="gameOverTitle">Game over</string>
+    <string name="gameOverMessage">Want to play another game?</string>
+    <string name="acerca_de">About</string>
+    <string name="exit_text">Exit</string>
+        <string name="aboutMe">Connect Four is a two-player connection game in which the players first choose a color 
+        and then take turns dropping colored discs from the top into a seven-column, six-row vertically suspended grid.\n\n
+        The pieces fall straight down, occupying the next available space within the column. 
+        The objective of the game is to connect four of one\'s own discs of the same color next 
+        to each other vertically, horizontally, or diagonally before your opponent.
+        </string>
+
+    <string name="pref_basicas">Basic preferences</string>
+    <string name="pref_show_exit_dialog">Show exit dialog?</string>
+    <string name="pref_show_exit_dialog_summary">Check it to show the exit confirmation dialog</string>
+    <string name="salir_de_la_app">Exit</string>
+    <string name="initialImage">Initial image</string>
+    <string name="secondCategoryPrefTitle">Game settings</string>
+    <string name="checBoxPrefTitle">Background music</string>
+    <string name="checBoxPrefSummary">Check if you wanto to listen to music</string>
+    <string name="preferences">Preferences</string>
+
+    
+    <string name="playernameTitle">Player name</string>
+    <string name="playernamesummary">Press to indicate the player\'s name</string>
+    
+    <string name="colorTitle">Card color</string>
+    <string name="colorSummary">Click to change the player card color</string>
+    
+    <string name="player_name">Player\'s name</string>
+    
+    <string name="winerplayer">¡You have win!</string>
+    <string name="winermachine">¡The machine has win!</string>
+    
+        
+    <string name="blue">Blue</string>
+    <string name="purple">Purple</string>
+    <string name="gray">Grray</string>
+    <string name="yellow">Yellow</string>
+    <string name="orange">Orange</string>
+    <string name="red">Red</string>
+    
+</resources>
+

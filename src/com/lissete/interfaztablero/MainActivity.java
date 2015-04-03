@@ -69,7 +69,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		player = getPlayerName(sharedPreferences);		
 		
 	   	if(player.trim().length()>0)
-	   		resultadoTextView.setText("Player :: " + player);
+	   		resultadoTextView.setText( getResources().getString(R.string.player_name) + " : " + player);
 	   	else
 	   		resultadoTextView.setText("");	   	
 
