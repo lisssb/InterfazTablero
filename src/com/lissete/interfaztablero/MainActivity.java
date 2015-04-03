@@ -41,9 +41,7 @@ public class MainActivity extends Activity implements OnClickListener{
 				bValidar  = (ImageButton) findViewById(ids[i][j]);
 				bValidar.setOnClickListener(this);
 			}
-		}
-		
-		
+		}	
 		resultadoTextView = (TextView) findViewById(R.id.resultadoTextView);
 	}
 	
@@ -63,29 +61,72 @@ public class MainActivity extends Activity implements OnClickListener{
 	
 	protected void onResume(){
 		super.onResume();
-		Boolean play = false;
-		String player = "";
-		
-		
+		Boolean play;
+	    String player;
+	    
 		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-	   	if (sharedPreferences.contains(PrefActivity.PLAY_MUSIC_KEY))
-    	    play = sharedPreferences.getBoolean(PrefActivity.PLAY_MUSIC_KEY, 
-    	    		PrefActivity.PLAY_MUSIC_DEFAULT);
-	   	
-	   	if(sharedPreferences.contains(PrefActivity.PLAYER_KEY)){
-	   		player = sharedPreferences.getString(PrefActivity.PLAYER_KEY, PrefActivity.PLAYER_DEFAULT);
-	   	}
-	   	   	
-	   	if(player.trim().length()>0){
+		play = getPlayMusic(sharedPreferences);
+		player = getPlayerName(sharedPreferences);		
+		
+	   	if(player.trim().length()>0)
 	   		resultadoTextView.setText("Player :: " + player);
-	   	}
-	   	else{
-	   		resultadoTextView.setText("");
-	   	}
+	   	else
+	   		resultadoTextView.setText("");	   	
 
 	   	if (play == true)
 	   		Music.play(this, R.raw.funkandblues);
+	   	
+	   	dibujarTablero();
+	   	
     }
+	
+	
+    public String getColor (SharedPreferences sharedPreferences) {
+		String color = PrefActivity.COLORES_DEFAULT;		
+	   	if (sharedPreferences.contains(PrefActivity.COLORES_KEY)){
+	   		color = sharedPreferences.getString(PrefActivity.COLORES_KEY, PrefActivity.COLORES_DEFAULT);
+	   	}	   		
+	   	return color;
+    }
+    
+    public int getColorId(String c){
+    	int color = Integer.parseInt(c);
+    	int color_id = R.drawable.play_gray;
+    	
+    	switch(color){
+    	    case 1:
+    	    	color_id = R.drawable.play_blue;
+    	    	break;
+    	    case 2:
+    	    	color_id = R.drawable.play_purple;
+    	    	break;
+    	    case 3:
+    	    	color_id = R.drawable.play_orange;
+    	    	break;
+    	    case 4:
+    	    	color_id = R.drawable.play_red;
+    	    	break;
+    	}
+    	return color_id;
+    }
+    
+    public String getPlayerName(SharedPreferences sharedPreferences){
+    	String name = "";
+    	
+    	if(sharedPreferences.contains(PrefActivity.PLAYER_KEY)){
+	   		name = sharedPreferences.getString(PrefActivity.PLAYER_KEY, PrefActivity.PLAYER_DEFAULT);
+	   	}
+    	return name;
+    }
+    
+    public Boolean getPlayMusic(SharedPreferences sharedPreferences){
+    	Boolean music = false;
+    	if (sharedPreferences.contains(PrefActivity.PLAY_MUSIC_KEY))
+    	    music = sharedPreferences.getBoolean(PrefActivity.PLAY_MUSIC_KEY, 
+    	    		PrefActivity.PLAY_MUSIC_DEFAULT);
+    	return music;
+    }
+    
     protected void onPause(){
 		super.onPause();
 		Music.stop(this);
@@ -104,6 +145,10 @@ public class MainActivity extends Activity implements OnClickListener{
 	
    public void dibujarTablero() {
        int id = 0;
+       int color;
+       SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+       color = getColorId(getColor(sharedPreferences));
+       
 
        for (int i = 0; i < Game.NFILAS; i++)
            for (int j = 0; j < Game.NCOLUMNAS; j++) {
@@ -111,7 +156,7 @@ public class MainActivity extends Activity implements OnClickListener{
         		   id = R.drawable.play2;
         	   }
         	   else if(game.devolverCasilla(i,j) == Game.JUGADOR){
-        		   id = R.drawable.play1;
+        		   id = color;
         	   }
         	   else{
         		   id = R.drawable.c4_button;
@@ -213,4 +258,5 @@ public class MainActivity extends Activity implements OnClickListener{
 		inflater.inflate(R.menu.menu, menu);
 		return true; 
 	}
+
 }

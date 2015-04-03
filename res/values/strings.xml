@@ -33,10 +33,21 @@
     <string name="playernameTitle">Nombre del jugador</string>
     <string name="playernamesummary">Pulse para indicar el nombre del jugador</string>
     
+    <string name="colorTitle">Color de fiche</string>
+    <string name="colorSummary">Pulse para cambiar el color de la ficha del jugador</string>
+    
     <string name="player_name">Nombre del jugador</string>
     
     <string name="winerplayer">¡Has ganado!</string>
     <string name="winermachine">¡La máquina ha ganado!</string>
+    
+        
+    <string name="blue">Azul</string>
+    <string name="purple">Purpura</string>
+    <string name="gray">Gris</string>
+    <string name="yellow">Amarillo</string>
+    <string name="orange">Naranja</string>
+    <string name="red">Rojo</string>
     
 </resources>
 
