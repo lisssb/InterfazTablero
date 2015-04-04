@@ -1,11 +1,10 @@
 package com.lissete.interfaztablero;
 
-import com.lissete.interfaztablero.*;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
+import android.content.res.Configuration;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -32,7 +31,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+		super.onCreate(savedInstanceState);		
 		setContentView(R.layout.activity_main);
 		game = new Game();
 		
@@ -52,7 +51,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	
 	public void onRestoreInstanceState (Bundle savedInstanceState){
         super.onRestoreInstanceState(savedInstanceState);
-        String grid = savedInstanceState.getString("GRID");
+        String grid = savedInstanceState.getString("TABLERO");
         game.stringToGrid(grid);
         dibujarTablero();
     }
@@ -91,20 +90,20 @@ public class MainActivity extends Activity implements OnClickListener{
     
     public int getColorId(String c){
     	int color = Integer.parseInt(c);
-    	int color_id = R.drawable.play_gray;
+    	int color_id = R.color.gray;
     	
     	switch(color){
     	    case 1:
-    	    	color_id = R.drawable.play_blue;
+    	    	color_id = R.color.blue;
     	    	break;
     	    case 2:
-    	    	color_id = R.drawable.play_purple;
+    	    	color_id = R.color.purple;
     	    	break;
     	    case 3:
-    	    	color_id = R.drawable.play_orange;
+    	    	color_id = R.color.orange;
     	    	break;
     	    case 4:
-    	    	color_id = R.drawable.play_red;
+    	    	color_id = R.color.red;
     	    	break;
     	}
     	return color_id;
@@ -153,16 +152,17 @@ public class MainActivity extends Activity implements OnClickListener{
        for (int i = 0; i < Game.NFILAS; i++)
            for (int j = 0; j < Game.NCOLUMNAS; j++) {
         	   if(game.devolverCasilla(i,j)==Game.MAQUINA){
-        		   id = R.drawable.play2;
+        		   id = R.color.yellow;
         	   }
         	   else if(game.devolverCasilla(i,j) == Game.JUGADOR){
         		   id = color;
         	   }
         	   else{
-        		   id = R.drawable.c4_button;
+        		   id = R.color.light_blue;
         	   }
                ImageButton imageButton = (ImageButton) findViewById(ids[i][j]);
-               imageButton.setImageResource(id);
+               GradientDrawable drawable = (GradientDrawable) imageButton.getDrawable();
+               drawable.setColor(getResources().getColor(id));
            }
    }
    

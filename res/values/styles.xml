@@ -33,19 +33,5 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
     
-    <style name="Play1">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_margin">5dp</item>
-        <item name="android:src">@drawable/play1</item>
-        <item name="android:background">@android:color/transparent</item>
-    </style>
-    <style name="Play2">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_margin">5dp</item>
-        <item name="android:src">@drawable/play2</item>
-        <item name="android:background">@android:color/transparent</item>
-    </style>
 
 </resources>

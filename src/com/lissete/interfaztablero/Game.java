@@ -1,6 +1,5 @@
 package com.lissete.interfaztablero;
 
-import java.lang.reflect.Array;
 import java.util.Random;
 
 public class Game {
@@ -163,7 +162,7 @@ public class Game {
 	 int count = 0;
 	 for (int fila = 0; fila < NFILAS; fila++){
 		 if(tablero[fila][j] == turno){
-			 count ++;
+			 count = count + 1;
 			 if(count == 4){return true;}
 			 
 		 }
@@ -178,7 +177,7 @@ public class Game {
 	 int count = 0;
 	 for (int columna = 0; columna < NFILAS; columna++){
 		 if(tablero[i][columna] == turno){
-			 count ++;
+			 count = count + 1;
 			 if(count == 4){return true;}			 
 		 }
 		 else{

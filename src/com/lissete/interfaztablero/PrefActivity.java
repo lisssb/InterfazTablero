@@ -1,13 +1,8 @@
 package com.lissete.interfaztablero;
 
 
-import java.util.HashMap;
 
-import org.xml.sax.Parser;
-
-import android.R.integer;
 import android.app.Activity;
-import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;

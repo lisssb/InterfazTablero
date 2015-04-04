@@ -10,7 +10,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/titulo"
         android:textSize="12sp"
         android:textStyle="bold" />
 
@@ -19,7 +18,7 @@
 
         <ImageButton
             android:id="@+id/a1"
-            style="@style/C4ButtonLand" 
+            style="@style/C4ButtonLand"
             android:contentDescription="@string/contentDescription">
         </ImageButton>
 
