@@ -35,6 +35,8 @@ public class MainActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_main);
 		game = new Game();
 		
+		String x [] = getResources().getStringArray(R.array.colores);
+		
 		for(int i = 0; i< Game.NFILAS;  i++){
 			for (int j = 0; j < Game.NCOLUMNAS;  j++){
 				bValidar  = (ImageButton) findViewById(ids[i][j]);
@@ -132,8 +134,8 @@ public class MainActivity extends Activity implements OnClickListener{
     }
 	
     /*************************************************************************
-    Completa este metodo.
-    Dependiendo del estado de cada casilla del tablero, debes asignar al
+
+    Dependiendo del estado de cada casilla del tablero asignar al
     identificador id el dibujable adecuado:
     - R.drawable.c4_button
     - R.drawable.c4_human_pressed_button

@@ -40,7 +40,7 @@ public class Game {
 	}
 	
     /*************************************************************************
-    Completa este metodo.
+   
     Parametros: indices i y j del tablero.
     Retorno: cierto si la posicion tablero[i][j] esta vacia (su valor
     es VACIO) y falso en caso contrario
@@ -53,7 +53,7 @@ public class Game {
    }
    
    /*************************************************************************
-   Completa este metodo.
+   
    Parametros: indices i y j del tablero.
    Retorno: cierto si la posicion tablero[i][j] esta ocupada por el
    jugador (su valor es JUGADOR) y falso en caso contrario
@@ -81,10 +81,10 @@ public class Game {
   }
 	
    /*************************************************************************
-   Completa este metodo.
+  
    Parametros: indices i y j del tablero.
    Retorno: cierto si se puede colocar ficha en la posicion (i,j) del
-   tablero. Debes comprobar que esa posicion del tablero esta vacia
+   tablero. se debe comprobar que esa posicion del tablero esta vacia
    (su valor es VACIO) y que es la posicion vacia mas baja del tablero.
    En caso contrario, la funcion debe devolver false.
    *************************************************************************/
