@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/lissete/AndroidStudioProjects/InterfazTablero/app/src/main/res/values/arrays.xml -->
+    <eat-comment/>
+    <string-array name="colores">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="colors_text">
+        <item>@string/gray</item>
+        <item>@string/blue</item>
+        <item>@string/purple</item>
+        <item>@string/orange</item>
+        <item>@string/red</item>
+    </string-array>
+    <!-- From: file:/C:/Users/lissete/AndroidStudioProjects/InterfazTablero/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="blue">#004a74</color>
+    <color name="gray">#faf0e600</color>
+    <color name="light_blue">#8DE7EF</color>
+    <color name="orange">#FF9933</color>
+    <color name="purple">#4A125C</color>
+    <color name="red">#ff0000</color>
+    <color name="yellow">#f9e009</color>
+    <!-- From: file:/C:/Users/lissete/AndroidStudioProjects/InterfazTablero/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="aboutMe">El objetivo de "Conecta 4" es alinear cuatro fichas sobre un tablero formado por seis filas 
+        y siete columnas.\nCada jugador dispone de 21 fichas de un color (por lo general, rojas o amarillas).2 Por turnos, 
+        los jugadores deben introducir una ficha en la columna que prefieran (siempre que no esté completa) 
+        y ésta caerá a la posición más baja. Gana la partida el primero que consiga alinear cuatro fichas 
+        consecutivas de un mismo color en horizontal, vertical o diagonal.\n Si todas las columnas están llenas 
+        pero nadie ha hecho una fila válida, hay empate.</string>
+    <string name="acerca_de">Acerca De</string>
+    <string name="app_name">Conecta 4</string>
+    <string name="blue">Azul</string>
+    <string name="checBoxPrefSummary">Marque si desea escuchar música</string>
+    <string name="checBoxPrefTitle">Música de fondo</string>
+    <string name="colorSummary">Pulse para cambiar el color de la ficha del jugador</string>
+    <string name="colorTitle">Color de la ficha</string>
+    <string name="contentDescription">Hello world!</string>
+    <string name="exit_text">Salir</string>
+    <string name="fin_del_juego">Fin del juego</string>
+    <string name="gameOverMessage">¿Quiere jugar otra partida?</string>
+    <string name="gameOverTitle">Fin del juego</string>
+    <string name="gray">Gris</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="initialImage"> Imagen inicial</string>
+    <string name="nosepuedecolocarficha">No se puede colocar fichar</string>
+    <string name="orange">Naranja</string>
+    <string name="player_name">Nombre del jugador</string>
+    <string name="playernameTitle">Nombre del jugador</string>
+    <string name="playernamesummary">Pulse para indicar el nombre del jugador</string>
+    <string name="pref_basicas">Preferencias básicas</string>
+    <string name="pref_show_exit_dialog">¿Mostrar diálogo de salida?</string>
+    <string name="pref_show_exit_dialog_summary">Presione aqui para mostrar el diálogo de confirmación de salida</string>
+    <string name="preferences">Preferencias</string>
+    <string name="purple">Purpura</string>
+    <string name="red">Rojo</string>
+    <string name="salir_de_la_app">Salir de la App</string>
+    <string name="secondCategoryPrefTitle">Ajustes del juego</string>
+    <string name="tableroLLeno">Tablero lleno</string>
+    <string name="titulo">Titulo</string>
+    <string name="winermachine">¡La máquina ha ganado!</string>
+    <string name="winerplayer">¡Has ganado!</string>
+    <string name="yellow">Amarillo</string>
+    <!-- From: file:/C:/Users/lissete/AndroidStudioProjects/InterfazTablero/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="C4Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:src">@drawable/c4_button</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="C4ButtonLand">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:src">@drawable/c4_button_land</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+</resources>

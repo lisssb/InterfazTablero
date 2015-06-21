@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+  <PreferenceCategory android:title="@string/pref_basicas">
+      <CheckBoxPreference
+          android:key="SHOW_EXIT_DIALOG"
+          android:title="@string/pref_show_exit_dialog"
+          android:summary="@string/pref_show_exit_dialog_summary" 
+          android:defaultValue="true"
+          />
+      
+       <EditTextPreference 
+          android:title="@string/playernameTitle"
+          android:summary="@string/playernamesummary"
+          android:key="playerName"
+          />
+  </PreferenceCategory>    
+  <PreferenceCategory android:title="@string/secondCategoryPrefTitle">
+
+ 
+      <ListPreference 
+          android:entries="@array/colors_text"
+          android:entryValues="@array/colores"
+          android:key="color_list"
+          android:title="@string/colorTitle"
+          android:summary="@string/colorSummary"
+          android:dialogTitle="@string/colorTitle"
+          />
+    	<CheckBoxPreference 
+            android:key="music"
+            android:title="@string/checBoxPrefTitle"
+            android:summary="@string/checBoxPrefSummary"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

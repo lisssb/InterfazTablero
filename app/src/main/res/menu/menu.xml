@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:title="@string/exit_text"
+        android:id="@+id/mi_salir"
+       />
+    <item 
+        android:title="@string/acerca_de"
+        android:id="@+id/acerca_de"
+       />
+    <item 
+        android:title="@string/preferences"
+        android:id="@+id/preferences"/>
+
+</menu>

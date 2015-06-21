@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Conecta 4</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="contentDescription">Hello world!</string>
+    <string name="nosepuedecolocarficha">No se puede colocar fichar</string>
+    <string name="fin_del_juego">Fin del juego</string>
+    <string name="tableroLLeno">Tablero lleno</string>
+    <string name="titulo">Titulo</string>
+    <string name="gameOverTitle">Fin del juego</string>
+    <string name="gameOverMessage">¿Quiere jugar otra partida?</string>
+    <string name="acerca_de">Acerca De</string>
+    <string name="exit_text">Salir</string>
+    <string name="aboutMe">El objetivo de "Conecta 4" es alinear cuatro fichas sobre un tablero formado por seis filas 
+        y siete columnas.\nCada jugador dispone de 21 fichas de un color (por lo general, rojas o amarillas).2 Por turnos, 
+        los jugadores deben introducir una ficha en la columna que prefieran (siempre que no esté completa) 
+        y ésta caerá a la posición más baja. Gana la partida el primero que consiga alinear cuatro fichas 
+        consecutivas de un mismo color en horizontal, vertical o diagonal.\n Si todas las columnas están llenas 
+        pero nadie ha hecho una fila válida, hay empate.</string>
+    <string name="pref_basicas">Preferencias básicas</string>
+    <string name="pref_show_exit_dialog">¿Mostrar diálogo de salida?</string>
+    <string name="pref_show_exit_dialog_summary">Presione aqui para mostrar el diálogo de confirmación de salida</string>
+    <string name="salir_de_la_app">Salir de la App</string>
+    <string name="initialImage"> Imagen inicial</string>
+    <string name="secondCategoryPrefTitle">Ajustes del juego</string>
+    <string name="checBoxPrefTitle">Música de fondo</string>
+    <string name="checBoxPrefSummary">Marque si desea escuchar música</string>
+    <string name="preferences">Preferencias</string>
+
+    
+    <string name="playernameTitle">Nombre del jugador</string>
+    <string name="playernamesummary">Pulse para indicar el nombre del jugador</string>
+    
+    <string name="colorTitle">Color de la ficha</string>
+    <string name="colorSummary">Pulse para cambiar el color de la ficha del jugador</string>
+    
+    <string name="player_name">Nombre del jugador</string>
+    
+    <string name="winerplayer">¡Has ganado!</string>
+    <string name="winermachine">¡La máquina ha ganado!</string>
+    
+        
+    <string name="blue">Azul</string>
+    <string name="purple">Purpura</string>
+    <string name="gray">Gris</string>
+    <string name="yellow">Amarillo</string>
+    <string name="orange">Naranja</string>
+    <string name="red">Rojo</string>
+    
+</resources>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+    <alpha
+        android:background="@android:color/darker_gray"
+        android:duration="5000" 
+        android:fromAlpha="0.3"
+        android:toAlpha="1.0"
+        
+        />
+
+</set>
+<!-- From: file:/C:/Users/lissete/AndroidStudioProjects/InterfazTablero/app/src/main/res/anim/initial2.xml -->
